@@ -10,14 +10,27 @@ Con escalabilidad horizontal se refiere a la posibilidad de aumentar el rendimie
 
 Por último, muchos de estos sistemas realizan operaciones directamente en memoria, y sólo vuelcan los datos a disco cada cierto tiempo. Esto permite que las operaciones de escritura sean realmente rápidas. Por supuesto, trabajar de este modo puede sacrificar fácilmente la durabilidad de los datos, y en caso de cuelgue o apagón se podrían perder operaciones de escritura o perder la consistencia. Normalmente, esto lo resuelven permitiendo que una operación de escritura haya de realizarse en más de un nodo antes de darla por válida, o disminuyendo el tiempo entre volcado y volcado de datos a disco. Pero claro, aún así, existe ese riesgo.
 
+## Tipos de bases de datos
+
+Como se mencionó en el apartado anterior, las bases de datos NoSQL al contrario que las SQL, no existe un único tipo o grupo, si no varios tipos según a lo que se oriente dicha base de datos. Con lo cual, cuando se comienza a aprender bases de datos NoSQL, hay que especificar qué tipo queremos aprender o dominamos.
+
+1. **Base de datos de Documentos:** Este tipo de base de datos almacena la información como un documento, usando para habitualmente para ello una estructura simple como JSON, BSON o XML y donde se utiliza una clave única para cada registro. Este tipo de implementación permite, además de realizar búsquedas por clave–valor, realizar consultas más avanzadas sobre el contenidodel documento. Son las bases de datos NoSQL más versátiles.
+
+2. **Almacenamiento Clave-Valor:** Son el modelo de base de datos NoSQL más popular, además de ser la más sencilla en cuanto a funcionalidad. En este tipo de sistema, cada elemento está identificado por una clave única, lo que permite la recuperación de la información de forma muy rápida, información que suele almacenarse como un objeto binario. Se caracterizan por ser muy eficientes tanto para las lecturas como para las escrituras. 
+
+3. **Bases de datos de grafos:** Usadas para aquellos datos cuyas relaciones se pueden representar adecuadamente mediante un grafo. Los datos se almacenan en estructuras grafo con nodos (entidades), propiedades (información entre entidades) y líneas (conexiones entre las entidades). 
+
+4. **Base de datos Columnar (o Columna ancha):** En vez de "tablas", en las bases de datos de columna tenemos familias de columnas que, son los contenedores de las filas. A diferencia de los RDBMS, no necesita conocer de antemano todas las columnas, cada fila no tiene por qué tener el mismo número de columnas. Este tipo de bases de datos se adecuan mejor a operaciones analíticas sobre grandes conjuntos de datos.
+
+
 ## Enlaces
 
-[El concepto NoSQL, o cómo almacenar tus datos en una base de datos no relacional (Genbetadev)](https://www.genbetadev.com/bases-de-datos/el-concepto-nosql-o-como-almacenar-tus-datos-en-una-base-de-datos-no-relacional)
+[Genbetadev: El concepto NoSQL, o cómo almacenar tus datos en una base de datos no relacional](https://www.genbetadev.com/bases-de-datos/el-concepto-nosql-o-como-almacenar-tus-datos-en-una-base-de-datos-no-relacional)
 
-[¿Qué es una Base de Datos NoSQL?](https://blogs.oracle.com/uncafeconoracle/qu-es-una-base-de-datos-nosql)
+[Un café con Oracle: ¿Qué es una Base de Datos NoSQL?](https://blogs.oracle.com/uncafeconoracle/qu-es-una-base-de-datos-nosql)
 
-[PFC Rául Herranz Gómez, universidad Carlos III de Madrid](https://e-archivo.uc3m.es/bitstream/handle/10016/22895/PFC_raul_herranz_gomez_2014.pdf)
+[PFC Rául Herranz Gómez, universidad Carlos III de Madrid (UC3M)](https://e-archivo.uc3m.es/bitstream/handle/10016/22895/PFC_raul_herranz_gomez_2014.pdf)
 
-[PFC Sergio Bellido Sánchez, universidad de Sevilla](http://bibing.us.es/proyectos/abreproy/12037/fichero/PFC_Sergio_Bellido_Sanchez%252FTema2_Panoramico.pdf)
+[PFC Sergio Bellido Sánchez, tema 2, universidad de Sevilla (US)](http://bibing.us.es/proyectos/abreproy/12037/fichero/PFC_Sergio_Bellido_Sanchez%252FTema2_Panoramico.pdf)
 
-[NoSQL y relaciones](https://www.genbetadev.com/bases-de-datos/nosql-y-relaciones)
+[Genbetadev: NoSQL y relaciones](https://www.genbetadev.com/bases-de-datos/nosql-y-relaciones)
