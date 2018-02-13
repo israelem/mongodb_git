@@ -14,14 +14,15 @@ Por último, muchos de estos sistemas realizan operaciones directamente en memor
 
 Como se mencionó en el apartado anterior, las bases de datos NoSQL al contrario que las SQL, no existe un único tipo o grupo, si no varios tipos según a lo que se oriente dicha base de datos. Con lo cual, cuando se comienza a aprender bases de datos NoSQL, hay que especificar qué tipo queremos aprender o dominamos.
 
-1. **Base de datos de Documentos:** Este tipo de base de datos almacena la información como un documento, usando para habitualmente para ello una estructura simple como JSON, BSON o XML y donde se utiliza una clave única para cada registro. Este tipo de implementación permite, además de realizar búsquedas por clave–valor, realizar consultas más avanzadas sobre el contenidodel documento. Son las bases de datos NoSQL más versátiles.
+**1. Base de datos de Documentos:** Este tipo de base de datos almacena la información como un documento, usando para habitualmente para ello una estructura simple como JSON, BSON o XML y donde se utiliza una clave única para cada registro. Este tipo de implementación permite, además de realizar búsquedas por clave–valor, realizar consultas más avanzadas sobre el contenidodel documento. Son las bases de datos NoSQL más versátiles.
 
-2. **Almacenamiento Clave-Valor:** Son el modelo de base de datos NoSQL más popular, además de ser la más sencilla en cuanto a funcionalidad. En este tipo de sistema, cada elemento está identificado por una clave única, lo que permite la recuperación de la información de forma muy rápida, información que suele almacenarse como un objeto binario. Se caracterizan por ser muy eficientes tanto para las lecturas como para las escrituras. 
+**2. Almacenamiento Clave-Valor:** Son el modelo de base de datos NoSQL más popular, además de ser la más sencilla en cuanto a funcionalidad. En este tipo de sistema, cada elemento está identificado por una clave única, lo que permite la recuperación de la información de forma muy rápida, información que suele almacenarse como un objeto binario. Se caracterizan por ser muy eficientes tanto para las lecturas como para las escrituras. 
 
-3. **Bases de datos de grafos:** Usadas para aquellos datos cuyas relaciones se pueden representar adecuadamente mediante un grafo. Los datos se almacenan en estructuras grafo con nodos (entidades), propiedades (información entre entidades) y líneas (conexiones entre las entidades). 
+**3. Bases de datos de grafos:** Usadas para aquellos datos cuyas relaciones se pueden representar adecuadamente mediante un grafo. Los datos se almacenan en estructuras grafo con nodos (entidades), propiedades (información entre entidades) y líneas (conexiones entre las entidades). 
 
-4. **Base de datos Columnar (o Columna ancha):** En vez de "tablas", en las bases de datos de columna tenemos familias de columnas que, son los contenedores de las filas. A diferencia de los RDBMS, no necesita conocer de antemano todas las columnas, cada fila no tiene por qué tener el mismo número de columnas. Este tipo de bases de datos se adecuan mejor a operaciones analíticas sobre grandes conjuntos de datos.
+**4. Base de datos Columnar (o Columna ancha):** En vez de "tablas", en las bases de datos de columna tenemos familias de columnas que, son los contenedores de las filas. A diferencia de los RDBMS, no necesita conocer de antemano todas las columnas, cada fila no tiene por qué tener el mismo número de columnas. Este tipo de bases de datos se adecúan mejor a operaciones analíticas sobre grandes conjuntos de datos.
 
+Después de esta introducción pudiera parecer que las bases de datos NoSQL, se adaptan mejor a una variedad de problemas muy diversos y lo cual es cierto. Sin embargo no todos los problemas se pueden resolver con uno o varios tipos de bases de datos. Con lo cual lo normal es que las bases de datos NoSQL complementen a las bases de datos SQL teniendo en un proyecto más de una base de datos.
 
 ## Enlaces
 
