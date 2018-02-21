@@ -16,8 +16,15 @@ Para resumirlo, un archivo JSON, almacena pares de clave : valor, donde todas la
 
 ```JSON
 {
-
+	name : "John",
+	age : 25,
+	hobbies : ["sports", "music"]
+}
 ```
+
+Este archivo sería válido en formato JSON, sin embargo, hay un atributo llamaddo "\_id" que indica la clave de un documento y que MongoDB permite informalo con el valor que consideremos oportuno, pero que si nose realiza como es el ejemplo anterior, automáticamente le asignará un valor del estilo `ObjectId("52f602d787945c344bb4bda5")`, tampoco vamos a entrar en detalles, pero la documentación oficial indica cómo se generan.
+
+Una de las ventajas de utilizar JSON como formato de documento es que muchos lenguajes tienen librerías o paquetes para manejarlos de forma cómoda además de que hay traducción entre los tipos que se almacenan en un archivo y los que los propios lenguajes utilizan.
 
 ## Enlaces:
  
