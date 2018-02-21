@@ -7,10 +7,24 @@ Dicho todo esto, ¿dónde utilizar MongoDB? Pues donde queramos obviamente, sin 
 ## Relacionando conceptos
 
 Para entender los conceptos propios de MongoDB como son **colecciones**, **documentos** y **campos**, lo mejor es relacionarlos con los que ya conocemos del modelo relacional. Para empezar Un mismo servidor de MongoDB puede contener varias **bases de datos**. A su vez una base de datos está formada entre otras cosas por **colecciones**, que serían lo que entendemos por **tablas**. Una colección almacena ninguno, uno o varios documentos, por lo que podemos decir que un **documento** actuaría como una **fila**, por lo que se entiende que todos los documentos de una misma colección van a del mismo tipo, como pueden ser usuarios, facturas o lo que queramos almacenar. Sin embargo, y esto puede ser en lo que más se diferencia, cada documento tiene un conjunto de **campos**, que lo podríamos relacionar con las **columnas** de una tabla, con la salvedad de que en una tabla todas las filas tienen las mismas columnas, mientras que en una colección el esquema de cada documento puede variar, lo cual se ha de tener en cuenta a la hora de tratarlos a nivel de la base de datos o de los programas que la ataquen.
- 
+
+## Formato de documentos: BSON y JSON
+
+Sabemos que MongoDB trabaja con documentos, pero hasta ahora no hemos dicho qué formato tienen dichos documentos, a nivel interno, binario, el formato es **BSON**, que almacena un **JSON** y algunos datos extra como la longitud de los campos y demás. Sin embargo, el formato externo será **JSON**. Para quien no sepa qué es JSON, puede ir la [página oficial](https://www.json.org/json-es.html) y comprobar el formato.
+
+Para resumirlo, un archivo JSON, almacena pares de clave : valor, donde todas las claves, al menos en MongoDB son de tipo cadena de caracteres y el valor pueden ser números, cadenas de caracteres, arrays, booleanos, fechas, etc o incluso nuevos documentos u objetos JSON. Un ejemplo sería:
+
+```JSON
+{
+
+```
+
 ## Enlaces:
  
 [MongoDB manual](https://docs.mongodb.com/manual/)
+
 [Genbetadev: Una introducción a MongoDB](https://www.genbetadev.com/bases-de-datos/una-introduccion-a-mongodb)
+
 [Genbetadev: MongoDB, qué es, cómo funciona y cuándo podemos usarlo o no](https://www.genbetadev.com/bases-de-datos/mongodb-que-es-como-funciona-y-cuando-podemos-usarlo-o-no)
+
 [Wikipedia: MongoDB](https://es.wikipedia.org/wiki/MongoDB)
