@@ -26,8 +26,34 @@ Este archivo sería válido en formato JSON, sin embargo, hay un atributo llamad
 
 Una de las ventajas de utilizar JSON como formato de documento es que muchos lenguajes tienen librerías o paquetes para manejarlos de forma cómoda además de que hay traducción entre los tipos que se almacenan en un archivo y los que los propios lenguajes utilizan.
 
+## Instalación
+
+Como ocurre en muchas bases de datos, por un lado tenemos la base de datos en sí, instalamos un programa o serie de programas que ejecutan tanto la base de datos como los servicios que dan acceso a la misma. Por otro lado tenemos los programas cliente gráficos que se conectan a la base de datos, estos pueden ser de la misma empresa como ocurre con SQL developer de Oracle o MySQL Workbench de MySQL, del mismo moodo para MongoDB existe la aplicación MongoDB Compass. Tanto los instaladores para el servidor de MongoDB como el de compass están disponible en la página oficial [mongodb.com](www.mongodb.com).
+
+Sin embargo y debido a que vamos a evitar instalar el servidor en nuestro equipo optamos por utilizar una máquina virtual con MongoDB, para ello hay que recurrir a las que facilita [bitnami](bitnami.com), que por si no las conocéis tiene infinidad de aplicaciones y múltiples opciones para el uso de cada una como son contenedor docker, instalador y máquina virtual. En nuestro caso accederemos la página de [máquina virtual de MongoDB](https://bitnami.com/stack/mongodb/virtual-machine), la descargaremos e importaremos en nuestra aplicación de virtualbox o vmware, la que se prefiera. Una vez importada y arrancada tendremos una pantalla como esta:
+
+![Mongodb_bitnami](imagenes/mongodb_vm.png)
+
+Lo primero que debemos hacer es iniciar sesión en el sistema para ello utilizamos bitnami/bitnami y cambiamos la contraseña. Antes de conectarnos a la base de datos necesitamos permitir la conexión a la misma, y en el caso de mongodb el puertos es el 27017. Escribimos en la consola `sudo ufw allow 27017` y para comprobar qué puertos están abiertos ejecutamos `sudo ufw status`. Con esto ya tendríamos lista la parte del servidor por llamarlo de alguna manera.
+
+Por otro lado vamos a descargar una aplicación cliente de nuestra base de datos. Nos decantamos por Robo 3T, anteriormente Robomongo, que en la sección de [descargas](https://robomongo.org/download) de su página podemos encontrar la aplicación para linux, windows y OSx. Una vez instalado, debemos configurar la conexión, en principio, solo necesitamos rellenar las pestañas de connection y authentication. Quedando la primera de la siguiente manera:
+
+![connection](imagenes/connection.png)
+
+Siendo la IP, la que nos indique la máquina virtual. En el caso del ejemplo la configuración de red es adaptador puente en virtualbox de forma que la dirección es una dentro de la red local en la que se encuentra el equipo. Por otro lado, la pestaña authentication:
+
+![authentication](imagenes/authentication.png)
+
+Donde root es el administrador y la! contraseña nos aparece en el terminal nada más arrancar la máquina virtual. Una vez conectados, nos aparecen las bases de datos que existen por defecto:
+
+![bd_iniciales](imagenes/bd_iniciales.png)
+
+Por último, para abrir una shell, no tenemos más que pinchar con el botón derecho encima de la conexión y seleccionar la primer opción Open shell. Nos aparecerá una pestaña divida en dos partes, la superior donde podremos escribir las instrucciones y la inferior donde se mostrarán los resultados de la misma, por ejemplo:
+
+![shell](imagenes/shell.png)
+
 ## Enlaces:
- 
+
 [MongoDB manual](https://docs.mongodb.com/manual/)
 
 [Genbetadev: Una introducción a MongoDB](https://www.genbetadev.com/bases-de-datos/una-introduccion-a-mongodb)
